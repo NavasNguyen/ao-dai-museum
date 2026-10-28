@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="vi">
-<!-- Nhớ kiểm duyệt nội dung nha, tôi quá lười để search chay rồi nên có gemini -->
-<!-- Kêu cô mở file thì mở mạng lên do có lấy ảnh từ mạng xuống để hiện thị, không có thì file không có ảnh trừ điểm thì chịu nha mấy ní -->
-
-<!-- Set up phần <head> -->
 <head>
 <link rel="icon" type="image/png" href="https://png.pngtree.com/png-vector/20190716/ourmid/pngtree-museum-icon-png-image_1546929.jpg">
-<meta charset="UTF-8"> <!-- Này để hiện font tiếng việt nha ku -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AO DAI DIGITAL MUSEUM</title> <!-- Chỉnh mấy dòng chữ trên tab thì chỉnh ở đây nha ku -->
+<title>AO DAI DIGITAL MUSEUM</title>
 
-<!-- Cái <link> là để liên kết font chữ Be Vietnam Pro trên Google fonts á (nếu có mạng), không có mạng thì Arial nha ku -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- Cái đống bùi nhùi trong <style> là để chỉnh giao diện cho web nha ku (kiểu set trước, lúc sau lấy ra dùng thôi) -->
 <style>
   :root{
     --nen:#fbf6ee; --chu:#2b2118; --nhan:#8c2f39; --yellow:#c9a24b; --phu:#5c4a3a;
-  } /* Mấy chị em chỉnh màu thì chỉnh mã màu ở đây nhé */
+  }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Be Vietnam Pro",Arial,sans-serif;background:var(--nen);color:var(--chu);line-height:1.7}
   a{color:var(--nhan)}
   img{max-width:100%;display:block}
 
-  /* Setting thanh hiện ảnh */
   .slider-container {
     position: relative;
 	width: 100%;
-	height: 250px; /* Điều chỉnh chiều cao khung ảnh tùy ý bạn */
+	height: 250px; 
 	overflow: hidden;
 	border-radius: 8px 8px 0 0;
   }
@@ -100,8 +93,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
-  /* Setting thanh dropdown source */
+
   
   details summary {
     cursor: pointer;
@@ -110,7 +102,7 @@
   }
 
   details summary:hover {
-    color: #0056b3; /* Đổi màu nhẹ khi rê chuột vào */
+    color: #0056b3; 
   }
 
   ul.sub-links {
@@ -123,7 +115,6 @@
     margin-bottom: 4px;
   }
 
-  /* Setting mấy cái thanh menu */
   
   header.menu{position:sticky;top:0;z-index:10;background:var(--nhan);color:#fff;
     display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:12px 24px}
@@ -136,7 +127,6 @@
   h2::after{content:"";display:block;width:70px;height:3px;background:var(--yellow);margin-top:8px}
   .sub{color:var(--phu);margin:14px 0 28px}
 
-  /* Setting phần 1 - trang chủ */
   
   #trangchu{max-width:none;background:linear-gradient(135deg,#8c2f39,#3d1219);color:#fff;text-align:center;padding:110px 24px}
   #trangchu h1{font-size:2.8rem;margin-bottom:12px}
@@ -146,7 +136,6 @@
   .nut{display:inline-block;background:var(--yellow);color:#2b2118;padding:12px 28px;border-radius:30px;text-decoration:none;font-family:"Be Vietnam Pro",Arial,sans-serif;font-weight:bold}
   .nut:hover{background:#fff}
 
-  /* Setting phần 2 - không gian trưng bày */
   
   .phongtrungbay{display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
   .the{flex:1 1 190px;max-width:205px;background:#fff;border:3px solid transparent;border-radius:10px;
@@ -157,7 +146,6 @@
   .the h3{font-size:1.05rem;color:var(--nhan);margin-bottom:6px}
   .the p{font-size:.9rem;color:var(--phu);line-height:1.5}
 
-  /* Setting phần 3 - timeline */
   
   #thoigian{background:#f3e9d8;max-width:none}
   #thoigian .trong{max-width:1100px;margin:0 auto}
@@ -166,7 +154,6 @@
   .dong li::before{content:"";position:absolute;left:-44px;top:6px;width:16px;height:16px;background:var(--nhan);border:3px solid #f3e9d8;border-radius:50%}
   .dong .nam{font-weight:bold;color:var(--nhan);font-size:1.2rem;font-family:"Be Vietnam Pro",Arial,sans-serif}
 
-  /* Setting phần 4 - media: phương tiện */
   
   .media{display:flex;flex-wrap:wrap;gap:30px}
   .media > div{flex:1 1 320px}
@@ -176,7 +163,6 @@
   blockquote{border-left:4px solid var(--nhan);padding:8px 16px;margin:14px 0;background:#fff;font-style:italic}
   figcaption{font-size:.85rem;color:var(--phu);margin-top:6px}
 
-  /* Setting phần 5 - nguồn */
   
   #nguon ol{padding-left:22px}
   #nguon li{margin-bottom:10px}
@@ -187,10 +173,8 @@
 </style>
 </head>
 
-<!-- Set up phần <body> -->
 <body>
 
-<!-- Thanh menu -->
 <header class="menu">
   <div class="logo">🏛️ AO DAI DIGITAl MUSEUM</div>
   <nav>
@@ -202,7 +186,6 @@
   </nav>
 </header>
 
-<!-- Phần 1 - trang chủ -->
 <section id="trangchu">
   <h1>Áo dài Việt Nam</h1>
   <p class="khauhieu">Tà áo qua bao thế hệ – nét duyên của văn hóa Việt</p>
@@ -215,7 +198,6 @@
   <a class="nut" href="#trungbay">Bắt đầu tham quan ▸</a>
 </section>
 
-<!-- Phần 2 - không gian trưng bày -->
 <section id="trungbay">
   <h2>Không gian trưng bày</h2>
   <p class="sub">5 hiện vật tiêu biểu – rê chuột vào từng thẻ để xem rõ hơn.</p>
@@ -320,7 +302,7 @@
 	<article class="the">
 		<div class="slider-container">
 			<div class="slider-track">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI72ND6HJ1COa6JHaYZY9F9I5bEJ_kXiGSXDBPqZzfGg&s=10" alt="Ảnh áo dài học sinh 1" class="slide active"> <!-- Chị em trong nhóm muốn tranh thủ PR cho ảnh của mình thì quăng link ở đây nha :)) -->
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI72ND6HJ1COa6JHaYZY9F9I5bEJ_kXiGSXDBPqZzfGg&s=10" alt="Ảnh áo dài học sinh 1" class="slide active">
 				<img src="https://cafebiz.cafebizcdn.vn/162123310254002176/2024/10/2/ao-dai-trang-yodyvn4-17277124298321534605746-1727861725328-1727861725410982471978.jpg" alt="Ảnh áo dài học sinh 2" class="slide">
 				<img src="https://photo.znews.vn/w1024/Uploaded/kcwvouvs/2017_09_08/aodai1.jpg" alt="Ảnh áo dài học sinh 3" class="slide">
 			</div>
@@ -417,9 +399,8 @@
 </section>
 
 <footer>AO DAI DIGITAL MUSEUM · Sản phẩm học tập</footer>
-<footer>Made by Navas Nguyen</footer> <!-- Xóa này trước khi nộp, hoặc giữ cũng được :))) -->
+<footer>Made by Navas Nguyen</footer>
 
-<!-- Javascript cho chuyển ảnh -->
 <script>
 	function changeSlide(button, n) {
 		const container = button.closest('.slider-container');
